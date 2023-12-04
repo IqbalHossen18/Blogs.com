@@ -1,13 +1,221 @@
+
 .navbar{
-    background-color: rgb(2, 113, 113);
-    height: 50px;
+    background-color: #fdfadd;
+    height: 65px;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+.navlogo{
+    margin-left: -10px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    width: 100px;
+}
+.logo{
+    margin-top:5px;
+    height:12%;
+    width: 90px;
+}
+
+.navlogo span{
+    color:#AA9902;
+    font-weight: 700;
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.navlist{
+    padding-left: 100px;
+}
+.navlist span{
+    font-size: 20px;
+    color:rgb(0, 0, 0);
+    padding: 5px 8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: 0.8s;
+}
+.navlist span:hover{
+     background-color: #cfbe00;
+}
+.navright{
+    margin-top:10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    padding-right: 10px;
 }
-.navbar a{
-    color:white;
-    padding: 5px 12px;
+.navright label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.searchbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 25px;
+    color:#AA9902;
+    cursor: pointer;
+}
+.menubar{
+    cursor: pointer;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #AA9902;
+    padding:5px 8px;
+    font-size: 20px;
+    color:#ffffff;
+    border-radius: 3px;
+}
+.menubar:hover{
+    background-color:#c2af04;
+}
+
+
+.sidebar{
+    background-color: #fdfadd;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:0px;
+    left:-400px;
+    width:350px;
+    height: 100vh;
+    padding:20px 10px;
+    transition: left 0.3s;
+}
+.sidelog{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: inherit;
+    height: 50px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+}
+.loglogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logimg{
+    width: 100%;
+    height: 45px;
+    margin-top: 10px;
+}
+.sidelist{
+    width:300px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.sidelist p{
+    padding:15px;
+    width: inherit;
+    height: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:#000000;
+    font-size: 20px;
+    transition: 0.8s;
+}
+.sidebar p:hover{
+    background-color:#cfbe00;
+}
+
+.menuclose{
+    position: absolute;
+    top:35px;
+    left:-500px;
+    cursor: pointer;
+    font-size: 27px;
+    opacity: 0;
+    transition: 0.2s;
+}
+#check{
+    display: none;
+}
+
+#check:checked ~ .sidebar{
+    left:0px;
+}
+#check:checked ~ label .menuclose{
+    left:320px;
+    z-index: 6;
+    opacity: 1;
+}
+
+
+@media only screen and (max-width: 370px) {
+    .sidebar{
+        width:300px;
+    }
+    #check:checked ~ label .menuclose{
+        left:280px;
+    }
+    .logimg{
+        width: 100%;
+        height: 35px;
+        margin-top: 10px;
+    }
+  }
+
+
+
+
+
+@media only screen and (max-width: 980px) {
+    .navlogo span{
+      display: none;
+    }
+    .navlist{
+        padding-left: 0px;
+    }
+  }
+  @media only screen and (min-width: 890px) {
+    .menubar{
+      display: none;
+    }
+    .sidebar{
+        display: none;
+        z-index: 0;
+    }
+    .menuclose{
+    display: none;
+    z-index: 0;
+    }
+  }
+  @media only screen and (max-width: 890px) {
+    .navlist{
+      display: none;
+    }
+    .navlogo span{
+        display: flex;
+        position: absolute;
+        top:14px;
+        left:50%;
+        transform: translateX(-50%);
+    }
+  }
+
+  @media only screen and (min-width: 1400px) {
+    .navlist span{
+        font-size: 20px;
+        padding: 5px 20px;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .navlist span{
+        font-size: 20px;
+        padding: 5px 15px;
+    }
+  }
