@@ -1,5 +1,6 @@
 
 .navbar{
+    min-width: 300px;
     background-color: #fdfadd;
     height: 65px;
     width: 100%;
@@ -61,8 +62,14 @@
     align-items: center;
     margin-right: 10px;
     font-size: 25px;
-    color:#AA9902;
+    color:rgb(93, 90, 90);
     cursor: pointer;
+    transition: 0.2s;
+}
+.searchbar:hover{
+    transform: scale(1.2);
+    color:rgb(10, 167, 10);
+    font-weight: bold;
 }
 .menubar{
     cursor: pointer;
@@ -79,6 +86,9 @@
 .menubar:hover{
     background-color:#c2af04;
 }
+.menubar:focus{
+    background-color: none;
+}
 
 
 .sidebar{
@@ -92,6 +102,7 @@
     height: 100vh;
     padding:20px 10px;
     transition: left 0.3s;
+    z-index: 2;
 }
 .sidelog{
     display: flex;
@@ -168,10 +179,48 @@
         margin-top: 10px;
     }
   }
-
-
-
-
+  .searchinputone{
+    position:absolute;
+    top:-100px;
+  }
+  .searchinput{
+    position:absolute;
+    right: 10px;
+    width: 250px;
+    height: 40px;
+    z-index: 20;
+    border:1px solid silver;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+ .searchinput input{
+    width: 100%;
+    height: inherit;
+    border:none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+ }
+ .searchinput input:focus{
+    outline:none;
+ }
+ .searchinput p{
+    background-color: rgb(144, 215, 37);
+    color:rgb(255, 255, 255);
+    width: 50px;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 20px;
+ }
+ .searchinput p:hover{
+    background-color: greenyellow;
+    font-size: 25px;
+ }
 
 @media only screen and (max-width: 980px) {
     .navlogo span{
@@ -204,6 +253,9 @@
         top:14px;
         left:50%;
         transform: translateX(-50%);
+    }
+    .searchinput{
+        right: 50px;
     }
   }
 
