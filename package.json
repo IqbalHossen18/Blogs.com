@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "jquery": "^3.7.1",
     "mongodb": "^4.17.1",
     "mongoose": "^8.0.2",
     "next": "latest",
