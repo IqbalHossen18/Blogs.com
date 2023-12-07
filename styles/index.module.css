@@ -84,15 +84,16 @@
     gap:5px;
 
  }
+
  .blogItem{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:none;
     margin:0px auto;
     width:100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border:0.5px solid silver;
+    border-bottom:0.5px solid silver;
 
  }
  .blogimg{
@@ -121,14 +122,20 @@
  .aboutblog h1{
     color:#212F3C;
     font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     
  }
  .aboutblog h3{
-    
+    font-family: monospace;
     padding-top: 10px;
-    color:#566573;
+    color:#5a636d;
     text-align: justify;
  }
+.aboutblog span{
+   margin-top: 15px;
+   color:rgb(112, 112, 249);
+   font-family: monospace;
+}
 
 
 
@@ -139,11 +146,21 @@
 
 
 
+@media only screen and (min-width:1200px){
+   .blogs{
+      width:70%;
+      margin:0px;
+      border-right:0.5px solid rgb(210, 254, 107);
+      padding-right: 10px;
+      padding-left: 5px;
+   }
+ }
 
-
-
-
-
+@media only screen and (max-width:1200px){
+        .blogs{
+         width: 100%;
+        }
+ }
  @media only screen and (max-width:700px) {
      .aboutblog h1{
         color:#212F3C;
@@ -192,9 +209,12 @@
     }
   }
   @media only screen and (max-width:320px) {
+    .aboutblog{
+    padding:5px;
+    }
     .aboutblog h1{
        color:#212F3C;
-       font-size: 20px;
+       font-size: 11px;
        
     }
     .aboutblog h3{
@@ -202,7 +222,7 @@
        padding-top: 5px;
        color:#566573;
        text-align: justify;
-       font-size: 12px;
+       font-size: 9px;
     }
   }
 

@@ -43,68 +43,72 @@ const Home = () => {
         </div>
       </div>
       <div className={Styles.blogcontainer}>
-        <h1  style={{textAlign:'center' , paddingTop:'10px'}}>EorNex Tech Hub</h1>
-        <p style={{textAlign:'center' , paddingBottom:'10px'}}>Exploring the Latest and Best Innovations in Smartwatches, Mobiles, Laptops, and Tablets</p>
+        <div style={{ margin: '20px auto', fontFamily: 'sans-serif', color: 'lightred', width: '80%', textAlign: 'center' }}> <p>Dear valued customer,</p>
+          <p><br /></p>
+          <p>We at EorNex are committed to providing you with expertly researched and reliably recommended products and services. Your trust is our promise, and we take great pride in ensuring that you can have confidence in our offerings. Thank you for choosing EorNex.</p>
+          <p><br /></p>
+          <p>Best regards,</p>
+          <p>The EorNex Team</p>
+
+          <hr></hr></div>
         <div className={Styles.blogs}>
-
-          <Link href={'/'} className={Styles.blogItem}>
+          <Link href={'Oneblog/This is blogpost'} className={Styles.blogItem}>
             <div className={Styles.blogimg}>
-            <Image id={Styles.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
+              <Image id={Styles.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
             </div>
             <div className={Styles.aboutblog}>
-               <h1>Apple Watch Series 9</h1>
-               <h3>Unleashing the Future of Wearables: Series 9 Boasts Powerful S9 SiP, Intuitive Gestures, 2x Brighter Display, Siri Upgrades, and Health Innovations in a Stylish, Eco-Friendly Design.</h3>
+              <h1>Apple Watch Series 9: Precision, Elegance, Connectivity.</h1>
+              <h3> Swimproof, S9 SiP, Always-On Retina, 45mm/41mm, aluminum/stainless steel, up to 18 hours - <span>learn more..</span></h3>
 
             </div>
           </Link>
           <Link href={'/'} className={Styles.blogItem}>
             <div className={Styles.blogimg}>
-            <Image id={Styles.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
+              <Image id={Styles.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
             </div>
             <div className={Styles.aboutblog}>
-               <h1>Apple Watch Series 9</h1>
-               <h3>Unleashing the Future of Wearables: Series 9 Boasts Powerful S9 SiP, Intuitive Gestures, 2x Brighter Display, Siri Upgrades, and Health Innovations in a Stylish, Eco-Friendly Design.</h3>
+              <h1>Apple Watch Series 9</h1>
+              <h3>Unleashing the Future of Wearables: Series 9 Boasts Powerful S9 SiP, Intuitive Gestures, 2x Brighter Display, Siri Upgrades, and Health Innovations in a Stylish, Eco-Friendly Design.</h3>
 
             </div>
           </Link>
           <Link href={'/'} className={Styles.blogItem}>
             <div className={Styles.blogimg}>
-            <Image id={Styles.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
+              <Image id={Styles.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
             </div>
             <div className={Styles.aboutblog}>
-               <h1>Apple Watch Series 9</h1>
-               <h3>Unleashing the Future of Wearables: Series 9 Boasts Powerful S9 SiP, Intuitive Gestures, 2x Brighter Display, Siri Upgrades, and Health Innovations in a Stylish, Eco-Friendly Design.</h3>
+              <h1>Apple Watch Series 9</h1>
+              <h3>Unleashing the Future of Wearables: Series 9 Boasts Powerful S9 SiP, Intuitive Gestures, 2x Brighter Display, Siri Upgrades, and Health Innovations in a Stylish, Eco-Friendly Design.</h3>
 
             </div>
           </Link>
           <Link href={'/'} className={Styles.blogItem}>
             <div className={Styles.blogimg}>
-            <Image id={Styles.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
+              <Image id={Styles.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
             </div>
             <div className={Styles.aboutblog}>
-               <h1>Apple Watch Series 9</h1>
-               <h3>Unleashing the Future of Wearables: Series 9 Boasts Powerful S9 SiP, Intuitive Gestures, 2x Brighter Display, Siri Upgrades, and Health Innovations in a Stylish, Eco-Friendly Design.</h3>
+              <h1>Apple Watch Series 9</h1>
+              <h3>Unleashing the Future of Wearables: Series 9 Boasts Powerful S9 SiP, Intuitive Gestures, 2x Brighter Display, Siri Upgrades, and Health Innovations in a Stylish, Eco-Friendly Design.</h3>
 
             </div>
           </Link>
           <Link href={'/'} className={Styles.blogItem}>
             <div className={Styles.blogimg}>
-            <Image id={Styles.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
+              <Image id={Styles.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
             </div>
             <div className={Styles.aboutblog}>
-               <h1>Apple Watch Series 9</h1>
-               <h3>Unleashing the Future of Wearables: Series 9 Boasts Powerful S9 SiP, Intuitive Gestures, 2x Brighter Display, Siri Upgrades, and Health Innovations in a Stylish, Eco-Friendly Design.</h3>
+              <h1>Apple Watch Series 9</h1>
+              <h3>Unleashing the Future of Wearables: Series 9 Boasts Powerful S9 SiP, Intuitive Gestures, 2x Brighter Display, Siri Upgrades, and Health Innovations in a Stylish, Eco-Friendly Design.</h3>
 
             </div>
           </Link>
           <Link href={'/'} className={Styles.blogItem}>
             <div className={Styles.blogimg}>
-            <Image id={Styles.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
+              <Image id={Styles.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
             </div>
             <div className={Styles.aboutblog}>
-               <h1>Apple Watch Series 9</h1>
-               <h3>Unleashing the Future of Wearables: Series 9 Boasts Powerful S9 SiP, Intuitive Gestures, 2x Brighter Display, Siri Upgrades, and Health Innovations in a Stylish, Eco-Friendly Design.</h3>
-
+              <h1>Apple Watch Series 9</h1>
+              <h3>Unleashing the Future of Wearables: Series 9 Boasts Powerful S9 SiP, Intuitive Gestures, 2x Brighter Display, Siri Upgrades, and Health Innovations in a Stylish, Eco-Friendly Design.</h3>
             </div>
           </Link>
         </div>
