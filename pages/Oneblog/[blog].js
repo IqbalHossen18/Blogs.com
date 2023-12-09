@@ -2,6 +2,9 @@ import { useRouter } from 'next/router'
 import React from 'react'
 import s from '../../styles/slugs.module.css';
 import Image from 'next/image';
+import { FaArrowRightToBracket } from "react-icons/fa6";
+import { FiCornerRightDown } from "react-icons/fi";
+import Link from 'next/link';
 const Oneblog = () => {
   const router = useRouter()
   const { blog } = router.query;
@@ -18,50 +21,55 @@ const Oneblog = () => {
           <div className={s.box2}>
             <p>At the forefront of smartwatch innovation is the all-new Apple Watch Series 9, a powerhouse of advanced features that redefine the capabilities of wearable technology.</p>
             <div className={s.articleimg}>
+              <button style={{ backgroundColor: 'white', border: '0.5px solid black', color: "black", float: 'right', fontWeight: 'bold' }}>Price - $249</button>
               <Image id={s.articleimg} height={980} width={980} src='/applewatchseries9-article.jpg' alt='apple watch series 9' />
+              <Link href={'https://www.amazon.com/Apple-Smartwatch-Midnight-Aluminum-Fitness/dp/B0CHX13ZGM?th=1'} target='-blank'>
+                <button>Buy at Amazon<FaArrowRightToBracket className={s.buyarrow} /></button>
+              </Link>
             </div>
+            <h3>Apple Watch Series 9 - <span style={{ borderBottom: '2px solid green' }}>Highlight</span></h3>
+            <p>
 
-            <p><strong>Health and Fitness Companion: Empowering Well-Being</strong> As a health and fitness companion, the Series 9 excels. ECG and blood oxygen monitoring, sleep tracking, and cycle insights empower users with comprehensive well-being data. Customizable workout views, Apple Fitness+, and safety features like Fall and Crash Detection make it the ultimate fitness companion.</p>
-
-            <p><strong>S9 SiP: A Chip Like Never Before</strong> Powering this technological marvel is the S9 SiP, Apple's most advanced chip to date. With a dual-core CPU housing 5.6 billion transistors, the Series 9 chip boasts a 60% increase in capabilities compared to its predecessor, the S8 chip. The addition of a four-core Neural Engine processes machine learning tasks at double the speed, introducing a groundbreaking gesture – the double tap.</p>
-            <p><strong>2x Brighter Always-On Retina Display</strong> The display takes a significant leap forward with the Series 9. The 2x brighter Always-On Retina display reaches a maximum brightness of 2000 nits, ensuring optimal visibility even in direct sunlight. In low-light situations, such as a movie theater, the display dims to just 1 nit for a comfortable viewing experience.</p>
-
-            <p><strong>IOS 10 Redefined: Sustainability Meets Vision Health</strong> The watchOS 10 update brings a remarkable redesign to apps, offering more information at a glance. The Smart Stack, coupled with widgets, keeps users informed and connected. Apple takes a significant step towards sustainability with its first carbon-neutral product, the Series 9, providing insights into mental and vision health.</p>
-
-            <p><strong>More Than a Watch: A Lifestyle Evolution</strong> With cutting-edge features, innovative design, and a dedication to user well-being, the Apple Watch Series 9 transcends being a mere watch – it's a lifestyle. Experience the evolution of smartwatches and embrace the future on your wrist.</p>
-
+              The Apple Watch Series 9 is a comprehensive health and fitness companion, featuring ECG, blood oxygen monitoring, sleep tracking, and cycle insights for user well-being. Powered by the advanced S9 SiP chip, it introduces a 60% increase in capabilities and a four-core Neural Engine for faster machine learning. The 2x brighter Always-On Retina display reaches 2000 nits, and watchOS 10 brings a redesigned interface. As Apple's first carbon-neutral product, it provides insights into mental and vision health, transcending the typical smartwatch to become a lifestyle essential.
+            </p>
             <div className={s.aboutarticle}>
               <h3>Apple Watch Series 9/configuration</h3>
               <div>
                 <table className={s.configtable}>
-                  <tr>
-                    <td className={s.hoverableCell}>Display</td>
-                    <td className={s.hoverableCell}>2x Brighter, Up to 2000 nits</td>
-                  </tr>
-                  <tr>
-                    <td className={s.hoverableCell}>Chip</td>
-                    <td className={s.hoverableCell}>S9 SiP, Dual-core CPU, 5.6 billion transistors</td>
-                  </tr>
-                  <tr>
-                    <td className={s.hoverableCell}>Body</td>
-                    <td className={s.hoverableCell}>Carbon Neutral, Eco-friendly materials</td>
-                  </tr>
-                  <tr>
-                    <td className={s.hoverableCell}>Battery Life</td>
-                    <td className={s.hoverableCell}>Up to 18 hours, Fast Charging available</td>
-                  </tr>
-                  <tr>
-                    <td className={s.hoverableCell}>Fitness & Health</td>
-                    <td className={s.hoverableCell}>ECG, Blood Oxygen, Sleep, Cycle Tracking, Fitness+</td>
-                  </tr>
-                  <tr>
-                    <td className={s.hoverableCell}>Network & Connectivity</td>
-                    <td className={s.hoverableCell}>Cellular Connectivity, GPS, Wi-Fi, Ultra Wideband</td>
-                  </tr>
-                  <tr>
-                    <td className={s.hoverableCell}>Water Resistant & Memory</td>
-                    <td className={s.hoverableCell}>50 meters, Swimproof & Internal 64GB</td>
-                  </tr>
+                  <tbody>
+                    <tr>
+                      <td className={s.hoverableCell}>Display</td>
+                      <td className={s.hoverableCell}>2x Brighter, Up to 2000 nits</td>
+                    </tr>
+                    <tr>
+                      <td className={s.hoverableCell}>Chip</td>
+                      <td className={s.hoverableCell}>S9 SiP, Dual-core CPU, 5.6 billion transistors</td>
+                    </tr>
+                    <tr>
+                      <td className={s.hoverableCell}>Body</td>
+                      <td className={s.hoverableCell}>Carbon Neutral, Eco-friendly materials</td>
+                    </tr>
+                    <tr>
+                      <td className={s.hoverableCell}>Battery Life</td>
+                      <td className={s.hoverableCell}>Up to 18 hours, Fast Charging available</td>
+                    </tr>
+                    <tr>
+                      <td className={s.hoverableCell}>Fitness & Health</td>
+                      <td className={s.hoverableCell}>ECG, Blood Oxygen, Sleep, Cycle Tracking, Fitness+</td>
+                    </tr>
+                    <tr>
+                      <td className={s.hoverableCell}>Network & Connectivity</td>
+                      <td className={s.hoverableCell}>Cellular Connectivity, GPS, Wi-Fi, Ultra Wideband</td>
+                    </tr>
+                    <tr>
+                      <td className={s.hoverableCell}>Water Resistant & Memory</td>
+                      <td className={s.hoverableCell}>50 meters, Swimproof & Internal 64GB</td>
+                    </tr>
+                    <tr>
+                      <td className={s.hoverableCell}>Body</td>
+                      <td className={s.hoverableCell}>Anodized Aluminum</td>
+                    </tr>
+                  </tbody>
                 </table>
               </div>
             </div>
@@ -70,17 +78,112 @@ const Oneblog = () => {
           <div className={s.box3}>
             <div className={s.reasontobuy}>
               <h2>Reason To Buy</h2>
-              <p>Article Highlight</p>
-              <p>best quality</p>
-              <p>best quality</p>
-              <p>best quality</p>
-              <p>best quality</p>
-              <p>best quality</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Pros</th>
+                    <th>Cons</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Vivid Display</td>
+                    <td>Cost Consideration</td>
+                  </tr>
+                  <tr><td>Eco-Friendly Design</td>
+                    <td>Dependency on iPhone</td>
+                  </tr>
+                  <tr><td>Siri Advancements</td></tr>
+
+                  <tr><td>Health Tracking</td></tr>
+                  <tr><td>Swimproof Design</td></tr>
+                  <tr><td>Connectivity Options</td></tr>
+                </tbody>
+              </table>
             </div>
-            <div className={s.verdict}>
-              <p>Our verdict</p>
+            <div className={s.highlight}>
+              <h1>Our Opinion</h1>
+              <p>
+                Choose the Apple Watch Series 9 for a holistic health and fitness companion. Packed with ECG, blood oxygen monitoring, and sleep tracking, it's powered by an advanced S9 SiP chip. With a 2x brighter Always-On Retina display and a commitment to sustainability, it's not just a smartwatch but a lifestyle essential for a healthier and more connected future</p>
             </div>
           </div>
+        </div>
+      </div>
+      <div className={s.similerblogs}>
+        <div className={s.similertext}><span>More Blogs</span><FiCornerRightDown /></div>
+        <div className={s.blogs}>
+          <Link href={'/'} id={s.blogItem}>
+            <div className={s.blogimg}>
+              <Image id={s.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
+            </div>
+            <div className={s.aboutblog}>
+              <h4>Apple Watch Series 9</h4>
+            </div>
+          </Link>
+          <Link href={'/'} id={s.blogItem}>
+            <div className={s.blogimg}>
+              <Image id={s.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
+            </div>
+            <div className={s.aboutblog}>
+              <h4>Apple Watch Series 9</h4>
+            </div>
+          </Link>
+          <Link href={'/'} id={s.blogItem}>
+            <div className={s.blogimg}>
+              <Image id={s.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
+            </div>
+            <div className={s.aboutblog}>
+              <h4>Apple Watch Series 9</h4>
+            </div>
+          </Link>
+          <Link href={'/'} id={s.blogItem}>
+            <div className={s.blogimg}>
+              <Image id={s.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
+            </div>
+            <div className={s.aboutblog}>
+              <h4>Apple Watch Series 9</h4>
+            </div>
+          </Link>
+          <Link href={'/'} id={s.blogItem}>
+            <div className={s.blogimg}>
+              <Image id={s.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
+            </div>
+            <div className={s.aboutblog}>
+              <h4>Apple Watch Series 9</h4>
+            </div>
+          </Link>
+          <Link href={'/'} id={s.blogItem}>
+            <div className={s.blogimg}>
+              <Image id={s.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
+            </div>
+            <div className={s.aboutblog}>
+              <h4>Apple Watch Series 9</h4>
+            </div>
+          </Link>
+          <Link href={'/'} id={s.blogItem}>
+            <div className={s.blogimg}>
+              <Image id={s.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
+            </div>
+            <div className={s.aboutblog}>
+              <h4>Apple Watch Series 9</h4>
+            </div>
+          </Link>
+          <Link href={'/'} id={s.blogItem}>
+            <div className={s.blogimg}>
+              <Image id={s.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
+            </div>
+            <div className={s.aboutblog}>
+              <h4>Apple Watch Series 9</h4>
+            </div>
+          </Link>
+          <Link href={'/'} id={s.blogItem}>
+            <div className={s.blogimg}>
+              <Image id={s.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
+            </div>
+            <div className={s.aboutblog}>
+              <h4>Apple Watch Series 9</h4>
+            </div>
+          </Link>
         </div>
       </div>
     </>

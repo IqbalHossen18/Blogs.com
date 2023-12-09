@@ -1,9 +1,11 @@
 
 import Image from 'next/image';
 import Styles from '../styles/index.module.css';
+import { MdKeyboardArrowRight } from "react-icons/md";
 import Link from 'next/link';
+import clientPromise from '../lib/mongodb';
 
-const Home = () => {
+const Home = ({posts}) => {
   return (
     <>
       <div className={Styles.container}>
@@ -43,81 +45,60 @@ const Home = () => {
         </div>
       </div>
       <div className={Styles.blogcontainer}>
-        <div style={{ margin: '20px auto', fontFamily: 'sans-serif', color: 'lightred', width: '80%', textAlign: 'center' }}> <p>Dear valued customer,</p>
-          <p><br /></p>
-          <p>We at EorNex are committed to providing you with expertly researched and reliably recommended products and services. Your trust is our promise, and we take great pride in ensuring that you can have confidence in our offerings. Thank you for choosing EorNex.</p>
-          <p><br /></p>
-          <p>Best regards,</p>
-          <p>The EorNex Team</p>
-
-          <hr></hr></div>
         <div className={Styles.blogs}>
-          <Link href={'Oneblog/This is blogpost'} className={Styles.blogItem}>
-            <div className={Styles.blogimg}>
-              <Image id={Styles.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
-            </div>
-            <div className={Styles.aboutblog}>
-              <h1>Apple Watch Series 9: Precision, Elegance, Connectivity.</h1>
-              <h3> Swimproof, S9 SiP, Always-On Retina, 45mm/41mm, aluminum/stainless steel, up to 18 hours - <span>learn more..</span></h3>
-
-            </div>
-          </Link>
-          <Link href={'/'} className={Styles.blogItem}>
-            <div className={Styles.blogimg}>
-              <Image id={Styles.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
-            </div>
-            <div className={Styles.aboutblog}>
-              <h1>Apple Watch Series 9</h1>
-              <h3>Unleashing the Future of Wearables: Series 9 Boasts Powerful S9 SiP, Intuitive Gestures, 2x Brighter Display, Siri Upgrades, and Health Innovations in a Stylish, Eco-Friendly Design.</h3>
-
-            </div>
-          </Link>
-          <Link href={'/'} className={Styles.blogItem}>
-            <div className={Styles.blogimg}>
-              <Image id={Styles.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
-            </div>
-            <div className={Styles.aboutblog}>
-              <h1>Apple Watch Series 9</h1>
-              <h3>Unleashing the Future of Wearables: Series 9 Boasts Powerful S9 SiP, Intuitive Gestures, 2x Brighter Display, Siri Upgrades, and Health Innovations in a Stylish, Eco-Friendly Design.</h3>
-
-            </div>
-          </Link>
-          <Link href={'/'} className={Styles.blogItem}>
-            <div className={Styles.blogimg}>
-              <Image id={Styles.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
-            </div>
-            <div className={Styles.aboutblog}>
-              <h1>Apple Watch Series 9</h1>
-              <h3>Unleashing the Future of Wearables: Series 9 Boasts Powerful S9 SiP, Intuitive Gestures, 2x Brighter Display, Siri Upgrades, and Health Innovations in a Stylish, Eco-Friendly Design.</h3>
-
-            </div>
-          </Link>
-          <Link href={'/'} className={Styles.blogItem}>
-            <div className={Styles.blogimg}>
-              <Image id={Styles.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
-            </div>
-            <div className={Styles.aboutblog}>
-              <h1>Apple Watch Series 9</h1>
-              <h3>Unleashing the Future of Wearables: Series 9 Boasts Powerful S9 SiP, Intuitive Gestures, 2x Brighter Display, Siri Upgrades, and Health Innovations in a Stylish, Eco-Friendly Design.</h3>
-
-            </div>
-          </Link>
-          <Link href={'/'} className={Styles.blogItem}>
-            <div className={Styles.blogimg}>
-              <Image id={Styles.blogimg} height={900} width={1200} src='/applewatchseries9.jpg' alt='apple watch series 9' />
-            </div>
-            <div className={Styles.aboutblog}>
-              <h1>Apple Watch Series 9</h1>
-              <h3>Unleashing the Future of Wearables: Series 9 Boasts Powerful S9 SiP, Intuitive Gestures, 2x Brighter Display, Siri Upgrades, and Health Innovations in a Stylish, Eco-Friendly Design.</h3>
-            </div>
-          </Link>
+        {posts.map((items)=>{
+          return         <Link key={items.name} href={`${items.sluglink}`} className={Styles.blogItem}>
+          <div className={Styles.blogimg}>
+            <Image id={Styles.blogimg} height={900} width={1200} src={`/${items.postimg}.jpg`} alt='apple watch series 9' />
+          </div>
+          <div className={Styles.aboutblog}>
+            <p className={Styles.homeblogtag} > {items.tag} </p>
+            <h1> {items.name} </h1>
+            <h3>{items.postdescription}<span>learn more..</span></h3>
+          </div>
+        </Link>
+        })}
         </div>
-        <div className={Styles.bloghilight}>
+        {/* <div className={Styles.bloghilight}>
 
-        </div>
+        </div> */}
       </div>
+      <div style={{marginBottom:'15px', position:'relative', left:'50px'}}>
+        <button style={{display:'flex', justifyContent:'center', alignItems:'center'}}>More Blogs<MdKeyboardArrowRight style={{fontSize:'20px'}}/></button>
+      </div>
+      <div style={{ backgroundColor: '#34495E', fontFamily: 'sans-serif', color: '#EAEDED', width: '100%', textAlign: 'center' }}>
+        <div style={{padding:'20px'}}>
+        <p>Dear valued customer,</p>
+        <p><br /></p>
+        <p>We at EorNex are committed to providing you with expertly researched and reliably recommended products and services. Your trust is our promise, and we take great pride in ensuring that you can have confidence in our offerings. Thank you for choosing EorNex.</p>
+        <p><br /></p>
+        <p>Best regards,</p>
+        <p>The EorNex Team</p>
+
+        <hr></hr>
+        </div>
+        </div>
     </>
   );
 };
+
+export async function getServerSideProps() {
+  try {
+      const client = await clientPromise;
+      const db = client.db("test");
+
+      const posts = await db
+          .collection("watchposts")
+          .find({})
+          .toArray();
+
+      return {
+          props: { posts: JSON.parse(JSON.stringify(posts)) },
+      };
+  } catch (e) {
+      console.error(e);
+   
+  }
+}
 
 export default Home;

@@ -72,7 +72,7 @@
  /* blogs container start from here  */
  .blogcontainer{
     padding:5px;
-    width:100%;
+    width:99%;
     margin:0px auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  }
@@ -87,7 +87,8 @@
 
  .blogItem{
     font-family:none;
-    margin:0px auto;
+    margin:10px auto;
+    padding-bottom: 5px;
     width:100%;
     display: flex;
     flex-direction: row;
@@ -119,16 +120,21 @@
     justify-content: center;
 
  }
+ .homeblogtag{
+   color:rgb(250, 82, 82);
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   padding-bottom: 5px;
+ }
  .aboutblog h1{
-    color:#212F3C;
+    color:#000000;
     font-size: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Arial Narrow';
     
  }
  .aboutblog h3{
     font-family: monospace;
     padding-top: 10px;
-    color:#5a636d;
+    color:#000000;
     text-align: justify;
  }
 .aboutblog span{
@@ -167,12 +173,16 @@
         font-size: 22px;
         
      }
+
      .aboutblog h3{
         
         padding-top: 10px;
         color:#566573;
         text-align: justify;
         font-size: 15px;
+     }
+     .homeblogtag{
+      font-size: 15px;
      }
    }
    @media only screen and (max-width:550px) {
@@ -188,6 +198,9 @@
        text-align: justify;
        font-size: 12px;
     }
+    .homeblogtag{
+      font-size: 12px;
+    }
   }
 
    @media only screen and (max-width:430px) {
@@ -202,6 +215,9 @@
        color:#566573;
        text-align: justify;
        font-size: 8px;
+    }
+    .homeblogtag{
+      font-size: 8px;
     }
     .blogimg{
         width: 160px;
@@ -223,6 +239,9 @@
        color:#566573;
        text-align: justify;
        font-size: 9px;
+    }
+    .homeblogtag{
+      font-size: 9px;
     }
   }
 
