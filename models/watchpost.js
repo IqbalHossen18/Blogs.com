@@ -42,7 +42,6 @@ const Blogpostschema = new mongoose.Schema({
       }
     },
     opinion:{type: String , required:true},
-    sluglink:{type:String, required:true , unique:true},
     postimg:{type:String, required: true , unique:true}
 
 },{timestamps:true});
