@@ -1,17 +1,18 @@
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
 import React from 'react'
 import s from '../../styles/slugs.module.css';
 import Image from 'next/image';
 import { FaArrowRightToBracket } from "react-icons/fa6";
 import { FiCornerRightDown } from "react-icons/fi";
 import Link from 'next/link';
-const Oneblog = () => {
-  const router = useRouter()
-  const { blog } = router.query;
+import clientPromise from '../../lib/mongodb';
+const Oneblog = ({posts}) => {
+  // console.log(posts)
+
   return (
     <>
       <div className={s.ArticleContainer}>
-        <div className={s.Items}>
+        {/* <div className={s.Items}>
           <div className={s.box1}>
             <h4>Best Deals</h4>
             <h1>Apple Watch Series 9</h1>
@@ -107,9 +108,101 @@ const Oneblog = () => {
                 Choose the Apple Watch Series 9 for a holistic health and fitness companion. Packed with ECG, blood oxygen monitoring, and sleep tracking, it's powered by an advanced S9 SiP chip. With a 2x brighter Always-On Retina display and a commitment to sustainability, it's not just a smartwatch but a lifestyle essential for a healthier and more connected future</p>
             </div>
           </div>
-        </div>
+        </div> */}
+        {posts.map((article)=>{
+               return    <div key={article.name} className={s.Items}>
+               <div className={s.box1}>
+                 <h4>{article.tag}</h4>
+                 {console.log(article.name)}
+                 <h1>{article.name}</h1>
+                 <p>{article.surname}</p>
+               </div>
+     
+               <div className={s.box2}>
+                 <p>{article.subdesc}</p>
+                 <div className={s.articleimg}>
+                   <button style={{ backgroundColor: 'white', border: '0.5px solid black', color: "black", float: 'right', fontWeight: 'bold' }}>Price - ${article.price}</button>
+                   <Image id={s.articleimg} height={980} width={980} src={`/${article.articleimg}.jpg`} alt='apple watch series 9' />
+                   <Link href={`${article.articlelink}`} target='-blank'>
+                     <button>Buy at Amazon<FaArrowRightToBracket className={s.buyarrow} /></button>
+                   </Link>
+                 </div>
+                 <h3>{article.name} - <span style={{ borderBottom: '2px solid green' }}>Highlight</span></h3>
+                 <p>{article.highlight} </p>
+                 <div className={s.aboutarticle}>
+                   <h3>{article.name}/configuration</h3>
+                   <div>
+                     <table className={s.configtable}>
+                       <tbody>
+                         <tr>
+                           <td className={s.hoverableCell}>Display</td>
+                           <td className={s.hoverableCell}>{article.config.display}</td>
+                         </tr>
+                         <tr>
+                           <td className={s.hoverableCell}>Chip</td>
+                           <td className={s.hoverableCell}>{article.config.chip}</td>
+                         </tr>
+                         <tr>
+                           <td className={s.hoverableCell}>Body</td>
+                           <td className={s.hoverableCell}>{article.config.body}</td>
+                         </tr>
+                         <tr>
+                           <td className={s.hoverableCell}>Battery Life</td>
+                           <td className={s.hoverableCell}>{article.config.batterylife}</td>
+                         </tr>
+                         <tr>
+                           <td className={s.hoverableCell}>Fitness & Health</td>
+                           <td className={s.hoverableCell}>{article.config.fitnesshealth}</td>
+                         </tr>
+                         <tr>
+                           <td className={s.hoverableCell}>Network & Connectivity</td>
+                           <td className={s.hoverableCell}>{article.config.networkconnectivity}</td>
+                         </tr>
+                         <tr>
+                           <td className={s.hoverableCell}>Water Resistant & Memory</td>
+                           <td className={s.hoverableCell}>{article.config.waterresistantmemory}</td>
+                         </tr>
+                       </tbody>
+                     </table>
+                   </div>
+                 </div>
+               </div>
+     
+               <div className={s.box3}>
+                 <div className={s.reasontobuy}>
+                   <h2>Reason To Buy</h2>
+                   <table>
+                     <thead>
+                       <tr>
+                         <th>Pros</th>
+                         <th>Cons</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       <tr>
+                         <td>{article.resontobuy.pros.PR1}</td>
+                         <td>{article.resontobuy.cons.CR1}</td>
+                       </tr>
+                       <tr><td>{article.resontobuy.pros.PR2}</td>
+                         <td>{article.resontobuy.cons.CR2}</td>
+                       </tr>
+                       <tr><td>{article.resontobuy.pros.PR3}</td></tr>
+     
+                       <tr><td>{article.resontobuy.pros.PR4}</td></tr>
+                       <tr><td>{article.resontobuy.pros.PR5}</td></tr>
+                       <tr><td>{article.resontobuy.pros.PR6}</td></tr>
+                     </tbody>
+                   </table>
+                 </div>
+                 <div className={s.highlight}>
+                   <h1>Our Opinion</h1>
+                   <p>{article.opinion}</p>
+                 </div>
+               </div>
+             </div>
+        })}
       </div>
-      <div className={s.similerblogs}>
+      {/* <div className={s.similerblogs}>
         <div className={s.similertext}><span>More Blogs</span><FiCornerRightDown /></div>
         <div className={s.blogs}>
           <Link href={'/'} id={s.blogItem}>
@@ -185,9 +278,31 @@ const Oneblog = () => {
             </div>
           </Link>
         </div>
-      </div>
+      </div> */}
     </>
   )
+}
+
+
+export async function getServerSideProps(context) {
+  try {
+      const client = await clientPromise;
+      const db = client.db("test");
+
+      const posts = await db
+          .collection("watchposts")
+          .find({name:context.query.blog})
+          .toArray();
+      return {
+          props: { posts: JSON.parse(JSON.stringify(posts)) },
+      };
+  } catch (e) {
+      console.error(e);
+      return {
+        props: { posts: [] }, // Return an empty array or handle the error in your component
+      };
+   
+  }
 }
 
 export default Oneblog
