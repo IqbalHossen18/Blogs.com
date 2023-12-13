@@ -9,6 +9,7 @@ const handler =  async(req, res)=> {
                 const {
                     tag,
                     name,
+                    category,
                     surname,
                     subdesc,
                     price,
@@ -19,7 +20,6 @@ const handler =  async(req, res)=> {
                     config,
                     resontobuy,
                     opinion,
-                    sluglink,
                     postimg
                 } = req.body;
         
@@ -27,6 +27,7 @@ const handler =  async(req, res)=> {
                 const newpost = new watchpost({
                     tag,
                     name,
+                    category,
                     surname,
                     subdesc,
                     price,
@@ -37,7 +38,6 @@ const handler =  async(req, res)=> {
                     config,
                     resontobuy,
                     opinion,
-                    sluglink,
                     postimg
                 });
         

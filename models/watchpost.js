@@ -6,6 +6,7 @@ const Blogpostschema = new mongoose.Schema({
 
     tag:{type:String, required:true},
     name:{type: String , required:true, unique:true},
+    category:{type:String , required:true},
     surname:{type: String , required:true},
     subdesc:{type: String , required:true},
     price:{type: String , required:true},

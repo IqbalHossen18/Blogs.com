@@ -122,7 +122,7 @@ const Oneblog = ({posts}) => {
                  <p>{article.subdesc}</p>
                  <div className={s.articleimg}>
                    <button style={{ backgroundColor: 'white', border: '0.5px solid black', color: "black", float: 'right', fontWeight: 'bold' }}>Price - ${article.price}</button>
-                   <Image id={s.articleimg} height={980} width={980} src={`/${article.articleimg}.jpg`} alt='apple watch series 9' />
+                   <Image id={s.articleimg} height={980} width={980} src={`/${article.articleimg}.jpg`} alt={`${article.name}`} />
                    <Link href={`${article.articlelink}`} target='-blank'>
                      <button>Buy at Amazon<FaArrowRightToBracket className={s.buyarrow} /></button>
                    </Link>
