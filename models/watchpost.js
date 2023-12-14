@@ -47,4 +47,4 @@ const Blogpostschema = new mongoose.Schema({
 
 },{timestamps:true});
 mongoose.models = {}
-export default mongoose.model("watchposts", Blogpostschema)
+export default mongoose.model("watchblog", Blogpostschema)

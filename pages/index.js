@@ -54,7 +54,7 @@ const Home = ({posts}) => {
           <div className={Styles.aboutblog}>
             <p className={Styles.homeblogtag} > {items.tag} </p>
             <h1> {items.name} </h1>
-            <h3>{items.postdescription}<span>learn more..</span></h3>
+            <h3>{items.postdescription}</h3>
           </div>
         </Link>
         })}
@@ -88,10 +88,9 @@ export async function getServerSideProps() {
       const db = client.db("test");
 
       const posts = await db
-          .collection("watchposts")
+          .collection("watchblogs")
           .find({})
           .toArray();
-
       return {
           props: { posts: JSON.parse(JSON.stringify(posts)) },
       };

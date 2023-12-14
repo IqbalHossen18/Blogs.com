@@ -290,7 +290,7 @@ export async function getServerSideProps(context) {
       const db = client.db("test");
 
       const posts = await db
-          .collection("watchposts")
+          .collection("watchblogs")
           .find({name:context.query.blog})
           .toArray();
       return {
