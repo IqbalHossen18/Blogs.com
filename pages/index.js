@@ -63,7 +63,7 @@ const Home = ({posts}) => {
 
         </div> */}
       </div>
-      <div style={{marginBottom:'15px', position:'relative', left:'50px'}}>
+      <div style={{ marginBottom:'15px', position:'relative', marginLeft:'20px'}}>
         <button style={{display:'flex', justifyContent:'center', alignItems:'center'}}>More Blogs<MdKeyboardArrowRight style={{fontSize:'20px'}}/></button>
       </div>
       <div style={{ backgroundColor: '#34495E', fontFamily: 'sans-serif', color: '#EAEDED', width: '100%', textAlign: 'center' }}>
