@@ -15,8 +15,8 @@ const Navbar = () => {
           <Link href={"/"}><span>EorNex</span></Link>
         </div>
         <div className={Styles.navlist}>
-          <Link href='/signup'><span>Top Trending</span></Link>
-          <Link href='/Allusers'><span>Bset Picks</span></Link>
+          <Link href='/toptrend'><span>Top Trending</span></Link>
+          <Link href='/bestpicks'><span>Bset Picks</span></Link>
           <Link href='/smartdevices'><span>Smart Devices</span></Link>
           <Link href='/gadgets'><span>Gadgets</span></Link>
           <Link href='/news'><span>News</span></Link>
