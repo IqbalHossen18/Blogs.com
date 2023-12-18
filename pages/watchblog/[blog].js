@@ -94,6 +94,8 @@ const Oneblog = ({posts}) => {
                        <tr><td>{article.resontobuy.pros.PR4}</td></tr>
                        <tr><td>{article.resontobuy.pros.PR5}</td></tr>
                        <tr><td>{article.resontobuy.pros.PR6}</td></tr>
+
+
                      </tbody>
                    </table>
                  </div>

@@ -88,16 +88,21 @@ export async function getServerSideProps() {
       const client = await clientPromise;
       const db = client.db("test");
 
-      const posts = await db
-          .collection("watchblogs")
+      let posts = await db
+          .collection("Allblogsofeornex")
           .find({})
           .toArray();
       return {
-          props: { posts: JSON.parse(JSON.stringify(posts)) },
+          props: { posts: JSON.parse(JSON.stringify(posts))}
       };
   } catch (e) {
       console.error(e);
-   
+      return {
+        props: {
+          error: "An error occurred while fetching data.",
+        },
+      };
+  
   }
 }
 

@@ -6,7 +6,7 @@ export default async (req, res) => {
        const db = client.db("test");
 
        const posts = await db
-           .collection("watchblogs")
+           .collection("Allblogsofeornex")
            .find({})
            .toArray();
 
