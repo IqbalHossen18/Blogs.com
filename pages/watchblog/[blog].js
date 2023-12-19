@@ -3,10 +3,9 @@ import React from 'react'
 import s from '../../styles/slugs.module.css';
 import Image from 'next/image';
 import { FaArrowRightToBracket } from "react-icons/fa6";
-import { FiCornerRightDown } from "react-icons/fi";
 import Link from 'next/link';
 import clientPromise from '../../lib/mongodb';
-const Oneblog = ({posts}) => {
+const Watchslug = ({posts}) => {
   // console.log(posts)
 
   return (
@@ -210,4 +209,4 @@ export async function getServerSideProps(context) {
   }
 }
 
-export default Oneblog
+export default Watchslug

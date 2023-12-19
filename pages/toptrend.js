@@ -43,7 +43,7 @@ export async function getServerSideProps() {
   
       // Fetch all posts
       const posts = await db
-        .collection("watchblogs")
+        .collection("Allblogsofeornex")
         .find({})
         .toArray();
   
@@ -53,7 +53,7 @@ export async function getServerSideProps() {
   
       // Fetch documents where the tag matches any of the unique tags
       const tagpost = await db
-        .collection("watchblogs")
+        .collection("Allblogsofeornex")
         .find({ tag: { $in: uniqueTags} })
         .toArray();
   

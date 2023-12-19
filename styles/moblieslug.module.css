@@ -1,0 +1,57 @@
+.mainsection{
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    padding-left:30px;
+    padding-top:15px;
+}
+.section1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.imgdiv{
+    width: 100%;
+    height:650px;
+    
+}
+#imgtag{
+    width: 100%;
+    height: 100%;
+}
+.affiliatelink{
+    padding:10px 0px;
+    display: flex;
+    gap:5px;
+}
+.highlight{
+    color:black;
+    padding:15px 0px;
+    font-size: 25px;
+}
+
+
+.section2{
+    padding:15px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: green;
+}
+.section2 div h1{
+    margin:5px 0px;
+}
+.tables{
+    padding:0px 20px;
+}
+.configdisplay tr td{
+    padding: 8px;
+    border: 2px solid silver;
+}
+
+
+.section3{
+    height: 300px;
+    background-color: yellow;
+}
