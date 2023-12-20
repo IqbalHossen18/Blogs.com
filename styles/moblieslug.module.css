@@ -13,7 +13,6 @@
 .imgdiv{
     width: 100%;
     height:650px;
-    
 }
 #imgtag{
     width: 100%;
@@ -37,21 +36,42 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: green;
+    /* background-color: green; */
 }
 .section2 div h1{
     margin:5px 0px;
 }
-.tables{
-    padding:0px 20px;
+
+.config{
+    cursor: pointer;
+    color:black;
+    font-family: sans-serif;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    border:1px solid rgb(218, 218, 185);
 }
-.configdisplay tr td{
-    padding: 8px;
-    border: 2px solid silver;
+.config tr td{
+    padding:8px;
 }
 
-
+.tabledata{
+    border-left: 0.5px solid silver;
+    border-bottom: 1px solid silver;
+    color:rgb(90, 89, 89);
+}
+.tabledata:hover{
+    color:rgb(60, 58, 58);
+}
+.tablehead{
+    color:rgb(90, 122, 0);
+    font-weight: bold;
+    /* border-right:1px solid rgb(25, 101, 4); */
+}
+.tablehead:hover{
+    color:black;
+}
 .section3{
     height: 300px;
-    background-color: yellow;
+    background-color: rgb(232, 232, 47);
 }

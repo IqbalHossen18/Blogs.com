@@ -48,8 +48,8 @@ const Navbar = () => {
               </div>
             </div>
             <div className={Styles.sidelist}>
-              <Link href='/signup'><p>Top Trending</p></Link>
-              <Link href='/Allusers'><p>Bset Picks</p></Link>
+              <Link href='/toptrend'><p>Top Trending</p></Link>
+              <Link href='/bestpicks'><p>Bset Picks</p></Link>
               <Link href='/smartdevices'><p>Smart Devices</p></Link>
               <Link href='/gadgets'><p>Gadgets</p></Link>
               <Link href='/news'><p>News</p></Link>
