@@ -1,18 +1,32 @@
 .mainsection{
     display: flex;
     flex-direction: column;
-    width: 1000px;
-    padding-left:30px;
-    padding-top:15px;
+    width: 60%;
+    padding-top: 20px;
+    margin:auto;
+    font-family: sans-serif;
 }
+@media only screen and (max-width: 1000px) {
+    .mainsection{
+        width: 90%;
+    }
+  }
 .section1{
     width: 100%;
     display: flex;
     flex-direction: column;
 }
-.imgdiv{
-    width: 100%;
-    height:650px;
+.section1 h5{
+    padding-top:10px;
+    color:rgb(249, 62, 62);
+}
+.itemname{
+    font-size: 35px;
+    font-family: Arial Narrow;
+}
+.section1 p{
+    padding:5px 0px;
+    font-size: 25px;
 }
 #imgtag{
     width: 100%;
@@ -20,7 +34,7 @@
 }
 .affiliatelink{
     padding:10px 0px;
-    display: flex;
+    display:flex;
     gap:5px;
 }
 .highlight{
@@ -28,34 +42,128 @@
     padding:15px 0px;
     font-size: 25px;
 }
+.prosandcons{
+    padding:10px 0px;
+}
+.prosandcons h3{
+    padding: 10px 0px;
+    font-size: 25px;
+    color:rgb(245, 180, 96);
+}
+.prosandcons ul{
+    padding-left: 25px;
+}
+.prosandcons ul li{
+    font-size: 18px;
+    margin:8px 0px;
+}
 
 
 .section2{
-    padding:15px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    /* background-color: green; */
+    margin-top: 15px;
 }
 .section2 div h1{
+    text-align: left;
     margin:5px 0px;
 }
 
-.config{
+.config:nth-child(1){
+    cursor: pointer;
+    color:black;
+    width: 100%;
+    padding: 10px;
+    background-color: #f3f3f3;
+    margin-top: 10px;
+}
+.config:nth-child(2){
+    margin-top: 10px;
     cursor: pointer;
     color:black;
     font-family: sans-serif;
     width: 100%;
     padding: 10px;
-    background-color: #ffffff;
-    border:1px solid rgb(218, 218, 185);
+        background-color: #f3f3f3;
 }
+.config:nth-child(3){
+    cursor: pointer;
+    color:black;
+    font-family: sans-serif;
+    width: 100%;
+    padding: 10px;
+        background-color: #f3f3f3;
+    margin-top: 10px;
+}
+.config:nth-child(4){
+    margin-top: 10px;
+    cursor: pointer;
+    color:black;
+    font-family: sans-serif;
+    width: 100%;
+    padding: 10px;
+        background-color: #f3f3f3;
+}
+.config:nth-child(5){
+    cursor: pointer;
+    color:black;
+    font-family: sans-serif;
+    width: 100%;
+    padding: 10px;
+        background-color: #f3f3f3;
+    margin-top: 10px;
+}
+.config:nth-child(6){
+    margin-top: 10px;
+    cursor: pointer;
+    color:black;
+    font-family: sans-serif;
+    width: 100%;
+    padding: 10px;
+        background-color: #f3f3f3;
+}
+.config:nth-child(7){
+    cursor: pointer;
+    color:black;
+    font-family: sans-serif;
+    width: 100%;
+    padding: 10px;
+        background-color: #f3f3f3;
+    margin-top: 10px;
+}
+.config:nth-child(8){
+    margin-top: 10px;
+    cursor: pointer;
+    color:black;
+    font-family: sans-serif;
+    width: 100%;
+    padding: 10px;
+        background-color: #f3f3f3;
+}
+.config:nth-child(9){
+    margin-top: 10px;
+    cursor: pointer;
+    color:black;
+    font-family: sans-serif;
+    width: 100%;
+    padding: 10px;
+        background-color: #f3f3f3;
+}
+.config:nth-child(10){
+    margin-top: 10px;
+    cursor: pointer;
+    color:black;
+    font-family: sans-serif;
+    width: 100%;
+    padding: 10px;
+        background-color: #f3f3f3;
+}
+
 .config tr td{
     padding:8px;
 }
 
 .tabledata{
+    /* width: 50%; */
+    margin-left: 20px;
     border-left: 0.5px solid silver;
     border-bottom: 1px solid silver;
     color:rgb(90, 89, 89);
@@ -63,15 +171,31 @@
 .tabledata:hover{
     color:rgb(60, 58, 58);
 }
-.tablehead{
+.tablehead{ 
+    width: 100px;
     color:rgb(90, 122, 0);
     font-weight: bold;
     /* border-right:1px solid rgb(25, 101, 4); */
 }
+@media only screen and (max-width: 500px) {
+    .tablehead{
+        width: auto;
+        font-weight: none;
+    }
+    .config{
+        margin:auto;
+        padding: 0px;
+        width: 98%;
+        font-size: 12px;
+    }
+  }
 .tablehead:hover{
     color:black;
 }
 .section3{
-    height: 300px;
-    background-color: rgb(232, 232, 47);
+    margin:15px 0px;
+}
+.ouropinion{
+    color:black;
+    font-size: 25px;
 }

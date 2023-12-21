@@ -8,9 +8,8 @@ const Mobileslug = () => {
             <div className={Styles.mainsection}>
                 <section className={Styles.section1}>
                     <h5>Top Deals</h5>
-                    <h1>Samsung Galaxy 22 Ultra</h1>
-                    <p>This is aobut okjlk  oiueorjlk lkejklwerkj wkerjweorjwoerj weriowejrowkdklf lk   osiudjowe</p>
-                    <p>Launch</p>
+                    <h1 className={Styles.itemname}>Samsung Galaxy S22 Ultra</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis officiis deserunt quia amet, at, illum voluptates explicabo commodi porro provident, consectetur natus. Labore placeat eius necessitatibus iusto nisi. Debitis, a.</p>
                     <div className={Styles.imgdiv}>
                         <Image id={Styles.imgtag} height={612} width={833} src="/galaxy22ultra.jpg" alt='mobile' />
                     </div>
@@ -18,11 +17,49 @@ const Mobileslug = () => {
                         <Link href={'/'}><button>Buy at amazon</button></Link>
                         <Link href={'/'}><button>Buy at walmart</button></Link>
                     </div>
-                    <p className={Styles.highlight}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, facere consectetur? Ipsam sapiente minus voluptatem deserunt vel provident molestiae dolorum voluptas a nisi, ipsum fugiat sit praesentium perspiciatis eius quis mollitia reprehenderit eligendi fugit in repudiandae ipsa iste corrupti cupiditate. Dolorem, id! Minima laboriosam ipsum corrupti, voluptas quae nobis a.</p>
+                    <div className={Styles.prosandcons}>
+                        <h2>Pros & Cons</h2>
+                        <h3>Pros</h3>
+                        <ul>
+                            <li>Classic Note design with unique camera styling.</li>
+                            <li>Built-in S Pen for versatility and improved latency.</li>
+                            <li>Spectacular display with Dynamic AMOLED 2X and 120Hz refresh rate.</li>
+                            <li>Fastest chip for enhanced performance.</li>
+                            <li>Exceptional battery life, 45W Super Fast Charging.</li>
+                            <li>Pro-grade camera system with massive sensors, 100x Space Zoom.</li>
+                        </ul>
+
+                        <h3>Cons</h3>
+                        <ul>
+                            <li>Built-in S Pen may impact device weight and size.</li>
+                            <li>Fast charging capability not well communicated.</li>
+                            <li>Not being named a Note might disappoint some users.</li>
+                        </ul>
+
+
+                    </div>
+                    <div>
+                        <h1>Highlight</h1>
+                        <p className={Styles.highlight}>The Samsung Galaxy S22 Ultra offers a range of impressive features, including S Pen integration, a 4nm processor, and pro-grade cameras with 108MP wide-angle lens and 100x Space Zoom capabilities. Its all-day battery and Nightography innovations make it a great choice for photography enthusiasts. The device also excels in productivity with S Pen precision, seamless connectivity with other Galaxy devices, and robust privacy features through Samsung Knox. Overall, the Galaxy S22 Ultra represents the epitome of excellence in smartphone technology.</p>
+                    </div>
                 </section>
                 <section className={Styles.section2}>
-                    <div><h1>Samsung Galaxy 22 Ultra/Configuration</h1></div>
+                    <div><h1>Samsung Galaxy  S22 Ultra/Configuration</h1></div>
                     <div className={Styles.tables}>
+                    <table className={Styles.config} >
+                            <tbody>
+                                <tr>
+                                    <td className={Styles.tablehead} rowSpan={2}>Launch</td>
+                                    <td>Announced</td>
+                                    <td className={Styles.tabledata}>2022, February 09
+</td>
+                                </tr>
+                                <tr>
+                                    <td>Released</td>
+                                    <td className={Styles.tabledata}>2022, February 25</td>
+                                </tr>
+                            </tbody>
+                        </table>
                         <table className={Styles.config}>
                             <tbody>
                                 <tr>
@@ -42,6 +79,10 @@ const Mobileslug = () => {
                                     <td>Protection</td>
                                     <td className={Styles.tabledata}>Corning Gorilla Glass Victus+</td>
                                 </tr>
+                            </tbody>
+                        </table>
+                        <table className={Styles.config} >
+                            <tbody>
                                 {/* camera section  */}
                                 <tr>
                                     <td className={Styles.tablehead} rowSpan={2}>Back Camera</td>
@@ -53,6 +94,10 @@ const Mobileslug = () => {
                                     <td>Video</td>
                                     <td className={Styles.tabledata}>	8K@24fps, 4K@30/60fps, 1080p@30/60/240fps, 720p@960fps, HDR10+, stereo sound rec., gyro-EIS</td>
                                 </tr>
+                            </tbody>
+                        </table>
+                        <table className={Styles.config} >
+                            <tbody>
                                 <tr>
                                     <td className={Styles.tablehead} rowSpan={2}>Selfie Camera</td>
                                     <td>Camera module</td>
@@ -62,12 +107,20 @@ const Mobileslug = () => {
                                     <td>Video</td>
                                     <td className={Styles.tabledata}>4K@30/60fps, 1080p@30fps</td>
                                 </tr>
+                            </tbody>
+                        </table>
+                        <table className={Styles.config} >
+                            <tbody>
                                 {/* memory section  */}
                                 <tr>
                                     <td className={Styles.tablehead}>Memory</td>
                                     <td>Internal</td>
                                     <td className={Styles.tabledata}>128GB 8GB RAM, 256GB 12GB RAM, 512GB 12GB RAM, 1TB 12GB RAM, UFS 3.1</td>
                                 </tr>
+                            </tbody>
+                        </table>
+                        <table className={Styles.config} >
+                            <tbody>
                                 {/* body sectioin */}
                                 <tr>
                                     <td className={Styles.tablehead} rowSpan={4}>Body</td>
@@ -86,6 +139,10 @@ const Mobileslug = () => {
                                     <td>Sim</td>
                                     <td className={Styles.tabledata}>Nano-SIM and eSIM or Dual SIM (2 Nano-SIMs and eSIM, dual stand-by)</td>
                                 </tr>
+                            </tbody>
+                        </table>
+                        <table className={Styles.config} >
+                            <tbody>
                                 {/* battery section  */}
                                 <tr>
                                     <td className={Styles.tablehead} rowSpan={2}>Battery</td>
@@ -96,13 +153,20 @@ const Mobileslug = () => {
                                     <td>Charging</td>
                                     <td className={Styles.tabledata}>45W wired, PD3.0, 15W wireless (Qi/PMA), 4.5W reverse wireless</td>
                                 </tr>
+                            </tbody>
+                        </table>
+                        <table className={Styles.config} >
+                            <tbody>
                                 {/* network section  */}
                                 <tr>
                                     <td className={Styles.tablehead}>Network</td>
                                     <td>Wireless</td>
                                     <td className={Styles.tabledata}>GSM / CDMA / HSPA / EVDO / LTE / 5G</td>
                                 </tr>
-                                {/* connectivity section  */}
+                            </tbody>
+                        </table>
+                        <table className={Styles.config} >
+                            <tbody>
                                 <tr>
                                     <td className={Styles.tablehead} rowSpan={4}>Connectivity</td>
                                     <td>Wlan</td>
@@ -120,6 +184,10 @@ const Mobileslug = () => {
                                     <td>Radio</td>
                                     <td className={Styles.tabledata}>No</td>
                                 </tr>
+                            </tbody>
+                        </table>
+                        <table className={Styles.config} >
+                            <tbody>
                                 {/* feature section  */}
                                 <tr>
                                     <td className={Styles.tablehead} rowSpan={2}>Features</td>
@@ -135,7 +203,10 @@ const Mobileslug = () => {
                     </div>
                 </section>
                 <section className={Styles.section3}>
-
+                     <div>
+                        <h1>Our opinion</h1>
+                        <p className={Styles.ouropinion}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam repudiandae exercitationem, nihil corrupti deleniti quos, facere fugit repellendus laudantium rerum voluptas ut a consequuntur. Rem incidunt praesentium sit vitae. Inventore totam ducimus porro, dolorum recusandae earum molestias doloribus ratione similique dolore laudantium deserunt quam ullam culpa. Eum quis voluptate delectus nulla sequi aspernatur, maxime eveniet cumque porro mollitia omnis magni officia voluptatibus totam nisi, iusto similique sed! Fuga similique rem omnis reprehenderit, officia laboriosam accusamus ratione quos quo excepturi incidunt officiis libero, quisquam dolorem laudantium quaerat. Aut quod et eaque magnam tempore, cupiditate, non quis soluta nisi impedit quo dicta.</p>
+                     </div>
                 </section>
             </div>
         </>
