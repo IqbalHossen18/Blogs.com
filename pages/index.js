@@ -49,7 +49,7 @@ const Home = ({posts}) => {
       <div className={Styles.blogcontainer}>
         <div className={Styles.blogs}>
         {posts.map((items)=>{
-          return         <Link key={items.name} href={`http://localhost:3000/${items.category === 'watch'? 'watchblog': 'mobileblog'}/${items.name}`} className={Styles.blogItem}>
+          return         <Link key={items.name} href={`https://blogs-com-timu.vercel.app/${items.category === 'watch'? 'watchblog': 'mobileblog'}/${items.name}`} className={Styles.blogItem}>
           <div className={Styles.blogimg}>
             <Image id={Styles.blogimg} height={900} width={1200} src={`/${items.postimg}.jpg`} alt={`${items.name}`} />
           </div>

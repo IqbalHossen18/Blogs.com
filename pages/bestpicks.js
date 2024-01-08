@@ -18,7 +18,7 @@ const Bestpicks = ({tagpost}) => {
       <div className={Styles.blogcontainer}>
         <div id='blogs' className={Styles.blogs}>
         {tagpost.map((items)=>{
-          return         <Link key={items.name} href={`http://localhost:3000/watchblog/${items.name}`} className={Styles.blogItem}>
+          return         <Link key={items.name} href={`https://blogs-com-timu.vercel.app/watchblog/${items.name}`} className={Styles.blogItem}>
           <div className={Styles.blogimg}>
             <Image id={Styles.blogimg} height={900} width={1200} src={`/${items.postimg}.jpg`} alt={`${items.name}`} />
           </div>
