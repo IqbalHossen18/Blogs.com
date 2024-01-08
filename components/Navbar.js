@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { FaBars } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
 import { FaWindowClose } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa6";
 const Navbar = () => {
   const [searchdrop, setsearchdrop] = useState(false)
   const [smlinks, setsmlinks] = useState(false)
@@ -21,7 +22,30 @@ const Navbar = () => {
           <Link href={'#'} onMouseOver={() => { setsmlinks(true) }} onMouseLeave={() => { setsmlinks(false) }}><span id={Styles.smartbar}>Smart Devices</span></Link>
 
           <div onMouseOver={() => { setsmlinks(true) }} onMouseLeave={() => { setsmlinks(false) }} className={smlinks === false ? Styles.smartlinksoff : Styles.smartlinks}>
-
+            <ul>
+              <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'https://blogs-com-timu.vercel.app/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23 ultra 5g</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+              <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'https://blogs-com-timu.vercel.app/watchblog/Apple%20Watch%20Series%209'}><span>Apple Watch Series 9</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+              <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'https://blogs-com-timu.vercel.app/watchblog/Apple%20Watch%20Ultra%202'}><span>Apple Watch Ultra 2</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+            </ul>
+            <ul>
+              <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23 ultra 5g</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+              <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsug</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+              <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23 ultra 5g</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+              <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+            </ul>
+            <ul>
+              <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23 ultra 5g</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+              <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsug</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+              <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23 ultra 5g</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+              <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+            </ul>
+            <ul>
+              <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23 ultra 5g</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+              <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsug</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+              <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23 ultra 5g</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+              <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+              <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+            </ul>
           </div>
 
 
@@ -55,12 +79,36 @@ const Navbar = () => {
               </div>
             </div>
             <div className={Styles.sidelist}>
-              <Link href='/toptrend'><p>Top Trending</p></Link>
+              <Link className={Styles.sideclose} href='/toptrend'><p>Top Trending</p></Link>
               <Link href='/bestpicks'><p>Bset Picks</p></Link>
-              <div onClick={() => { setsmlinks(true) }} ><p>Smart Devices</p></div>
+              <div onMouseOver={() => { setsmlinks(true) }} onMouseLeave={() => { setsmlinks(false) }} ><p>Smart Devices</p></div>
 
-              <div  className={smlinks === false ? Styles.smartlinksoff : Styles.smartlinksright}>
+              <div onMouseOver={() => { setsmlinks(true) }} onMouseLeave={() => { setsmlinks(false) }} className={smlinks === false ? Styles.smartlinksoff : Styles.smartlinksright}>
 
+                <ul>
+                  <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'https://blogs-com-timu.vercel.app/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23 ultra 5g</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+                  <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'https://blogs-com-timu.vercel.app/watchblog/Apple%20Watch%20Series%209'}><span>Apple Watch Series 9</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+                  <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'https://blogs-com-timu.vercel.app/watchblog/Apple%20Watch%20Ultra%202'}><span>Apple Watch Ultra 2</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+                </ul>
+                <ul>
+                  <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23 ultra 5g</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+                  <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsug</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+                  <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23 ultra 5g</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+                  <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+                </ul>
+                <ul>
+                  <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23 ultra 5g</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+                  <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsug</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+                  <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23 ultra 5g</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+                  <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+                </ul>
+                <ul>
+                  <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23 ultra 5g</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+                  <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsug</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+                  <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23 ultra 5g</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+                  <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+                  <li><Link className={Styles.smartitem} onClick={() => { setsmlinks(false) }} href={'http://localhost:3000/mobileblog/Samsung%20Galaxy%20S22%20Ultra%205G'}><span>Samsung s23</span><FaAngleRight className={Styles.sideicons} /></Link></li>
+                </ul>
               </div>
               <Link href='/gadgets'><p>Gadgets</p></Link>
               <Link href='/news'><p>News</p></Link>
