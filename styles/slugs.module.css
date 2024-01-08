@@ -2,14 +2,13 @@
  /* this one blog slug css is start from here */
 .ArticleContainer{
     width: 99%;
-    padding:5px;
+    /* padding:5px; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .Items{
     width: 60%;
     margin:auto;
-    padding:20px;
 }
 
 .box1{

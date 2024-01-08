@@ -10,6 +10,7 @@ const Watchslug = ({posts}) => {
 
   return (
     <>
+      <div style={{padding:'10px 20px'}}>
       <div className={s.ArticleContainer}>
         {posts.map((article)=>{
                return    <div key={article.name} className={s.Items}>
@@ -104,6 +105,7 @@ const Watchslug = ({posts}) => {
                </div>
              </div>
         })}
+      </div>
       </div>
       {/* <div className={s.similerblogs}>
         <div className={s.similertext}><span>More Blogs</span><FiCornerRightDown /></div>
