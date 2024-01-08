@@ -101,10 +101,6 @@
     background-color: silver;
   }
   
-  .hoverableCell:hover::before {
-    width: 100%;
-  }
-  
   .reasontobuy{
     padding:10px 0px;
   }
@@ -121,10 +117,6 @@
     width: 100%;
     padding:5px;
 }
-.reasontobuy table:hover{
-    
-    border-bottom: 5px solid rgb(145, 171, 0);
-}
 .reasontobuy table th{
     padding:10px;
     text-align: left;
@@ -139,10 +131,7 @@
     font-family: sans-serif;
     padding:10px 0px;
 }
-.highlight h1:hover{
-    color:#000000;
-    text-decoration: underline;
-}
+
 .highlight p{
     font-family: sans-serif;
     color:#000000;
