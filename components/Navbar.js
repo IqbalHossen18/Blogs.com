@@ -7,6 +7,7 @@ import { IoIosSearch } from "react-icons/io";
 import { FaWindowClose } from "react-icons/fa";
 const Navbar = () => {
   const [searchdrop, setsearchdrop] = useState(false)
+  const [smlinks, setsmlinks] = useState(false)
   return (
     <>
       <div className={Styles.navbar}>
@@ -17,7 +18,13 @@ const Navbar = () => {
         <div className={Styles.navlist}>
           <Link href='/toptrend'><span>Top Trending</span></Link>
           <Link href='/bestpicks'><span>Bset Picks</span></Link>
-          <Link href='/smartdevices'><span>Smart Devices</span></Link>
+          <Link href={'#'} onMouseOver={() => { setsmlinks(true) }} onMouseLeave={() => { setsmlinks(false) }}><span id={Styles.smartbar}>Smart Devices</span></Link>
+
+          <div onMouseOver={() => { setsmlinks(true) }} onMouseLeave={() => { setsmlinks(false) }} className={smlinks === false ? Styles.smartlinksoff : Styles.smartlinks}>
+
+          </div>
+
+
           <Link href='/gadgets'><span>Gadgets</span></Link>
           <Link href='/news'><span>News</span></Link>
           <Link href='/innovations'><span>Innovations</span></Link>
@@ -26,11 +33,11 @@ const Navbar = () => {
 
         <div className={Styles.navright}>
           <label htmlFor='nocheck'>
-            <div onMouseOver={()=>{setsearchdrop(true)}} onMouseLeave={()=>{setsearchdrop(false)}} className={Styles.searchbar}><IoIosSearch /></div>
-            <div onMouseOver={()=>{setsearchdrop(true)}} onMouseLeave={()=>{setsearchdrop(false)}}  className={searchdrop === false ? Styles.searchinputone:Styles.searchinput}>
-                <input  type='text' placeholder='search here'/>
-                <p><IoIosSearch/></p>
-              </div>
+            <div onMouseOver={() => { setsearchdrop(true) }} onMouseLeave={() => { setsearchdrop(false) }} className={Styles.searchbar}><IoIosSearch /></div>
+            <div onMouseOver={() => { setsearchdrop(true) }} onMouseLeave={() => { setsearchdrop(false) }} className={searchdrop === false ? Styles.searchinputone : Styles.searchinput}>
+              <input type='text' placeholder='search here' />
+              <p><IoIosSearch /></p>
+            </div>
           </label>
           <input type='checkbox' id={Styles.check} />
           <label htmlFor={Styles.check}>
@@ -50,7 +57,11 @@ const Navbar = () => {
             <div className={Styles.sidelist}>
               <Link href='/toptrend'><p>Top Trending</p></Link>
               <Link href='/bestpicks'><p>Bset Picks</p></Link>
-              <Link href='/smartdevices'><p>Smart Devices</p></Link>
+              <div onClick={() => { setsmlinks(true) }} ><p>Smart Devices</p></div>
+
+              <div  className={smlinks === false ? Styles.smartlinksoff : Styles.smartlinksright}>
+
+              </div>
               <Link href='/gadgets'><p>Gadgets</p></Link>
               <Link href='/news'><p>News</p></Link>
               <Link href='/innovations'><p>Innovations</p></Link>

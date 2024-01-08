@@ -15,7 +15,6 @@ const Watchslug = ({posts}) => {
                return    <div key={article.name} className={s.Items}>
                <div className={s.box1}>
                  <h4>{article.tag}</h4>
-                 {console.log(article.name)}
                  <h1>{article.name}</h1>
                  <p>{article.surname}</p>
                </div>

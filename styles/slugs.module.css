@@ -8,9 +8,8 @@
 
 .Items{
     width: 60%;
-    margin-left: 40px;
-    margin-top: 20px;
-    padding:10px;
+    margin:auto;
+    padding:20px;
 }
 
 .box1{
@@ -21,7 +20,8 @@
     padding:5px 0px;
 }
 .box1 h1{
-    color:#34495E;
+    color:#000000;
+    font-family: sans-serif;
     padding:5px 0px;
     font-size: 40px;
 }
@@ -92,7 +92,6 @@
 }
 .configtable{
     width: 100%;
-    border:1px solid black;
     height: 300px;
 }
 
@@ -100,18 +99,7 @@
     /* border:1px solid rgb(122, 122, 2); */
     position: relative;
     padding:5px;
-  }
-  
-  .hoverableCell::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background-color: rgb(219, 219, 7);
-    transition: width 0.8s;
-    color:black;
+    background-color: silver;
   }
   
   .hoverableCell:hover::before {
@@ -133,7 +121,6 @@
     font-family: sans-serif;
     width: 100%;
     padding:5px;
-    transition: 0.2s;
 }
 .reasontobuy table:hover{
     
@@ -141,11 +128,13 @@
 }
 .reasontobuy table th{
     padding:10px;
-    background-color: rgb(233, 250, 136);
-    color:black;
+    text-align: left;
+    font-size: 25px;
+    color:rgb(23, 160, 5);
 }
 .reasontobuy table td{
     padding:5px;
+    text-align: left;
 }
 .highlight{
     font-family: sans-serif;
@@ -198,14 +187,10 @@
     height: 100%;
 }
 
-
-
-
-
   @media only screen and (max-width:1200px) {
     .Items{
         width: 70%;
-        margin:0px;
+        
     }
     .similerblogs{
         width: 70%;
@@ -215,7 +200,6 @@
 @media only screen and (max-width:1000px) {
     .Items{
         width: 80%;
-        margin:0px;
     }
     .similerblogs{
         width: 80%;
@@ -226,7 +210,6 @@
 @media only screen and (max-width:850px) {
     .Items{
         width: 100%;
-        margin:0px;
     }
     .box2{
         width: 100%;

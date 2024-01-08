@@ -38,8 +38,7 @@
     color:rgb(0, 0, 0);
     padding: 5px 8px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    transition: 0.8s;
-}
+    transition: 0.8s;}
 .navlist span:hover{
      background-color: #cfbe00;
 }
@@ -164,7 +163,30 @@
     z-index: 6;
     opacity: 1;
 }
-
+#smartbar{
+    padding-bottom: 20px;
+}
+.smartlinksoff{
+    display: none;
+}
+.smartlinks{
+    display: block;
+    z-index: 50;
+    top:65px;
+    left: 0px;
+    position: absolute;
+    height: 200px;
+    width:100%;
+    background-color: silver;
+}
+.smartlinksright{
+    display: block;
+    top:250px;
+    position: absolute;
+    height:500px;
+    width:300px;
+    background-color: silver;
+}
 
 @media only screen and (max-width: 370px) {
     .sidebar{
