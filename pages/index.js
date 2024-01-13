@@ -64,6 +64,7 @@ const Home = ({posts}) => {
         {/* <div className={Styles.bloghilight}>
 
         </div> */}
+ 
       </div>
       <div style={{ marginBottom:'15px', position:'relative', marginLeft:'20px'}}>
         <button style={{display:'flex', justifyContent:'center', alignItems:'center'}}>More Blogs<MdKeyboardArrowRight style={{fontSize:'20px'}}/></button>

@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import connectToMongo from "../../lib/mongoose";
 import mobilepost from "../../models/mobilepost";
-const handler =  async(req, res)=> {
+const handler = async (req, res) => {
     try {
         if (req.method === "POST") {
             try {
@@ -12,17 +12,24 @@ const handler =  async(req, res)=> {
                     category,
                     subdesc,
                     price,
+                    officialprice,
+                    unofficialprice,
                     articlelink,
                     articleimg,
+                    articleimg2,
+                    articleimg3,
+                    articleimg4,
+                    articleimg5,
+                    articleimg6,
                     postdescription,
                     highlight,
                     config,
                     prosandcons,
                     opinion,
                     postimg
-                  } = req.body;
-                  
-        
+                } = req.body;
+
+
                 // Create a new instance of the watchpost model with the provided data
                 const newpost = new mobilepost({
                     tag,
@@ -30,8 +37,15 @@ const handler =  async(req, res)=> {
                     category,
                     subdesc,
                     price,
+                    officialprice,
+                    unofficialprice,
                     articlelink,
                     articleimg,
+                    articleimg2,
+                    articleimg3,
+                    articleimg4,
+                    articleimg5,
+                    articleimg6,
                     postdescription,
                     highlight,
                     config,
@@ -39,10 +53,10 @@ const handler =  async(req, res)=> {
                     opinion,
                     postimg
                 });
-        
+
                 // Save the new post to the database
                 await newpost.save();
-        
+
                 // Respond with a success message
                 res.status(200).json({ success: 'mobile post added' });
                 // res.status(200).json(newpost)
@@ -51,11 +65,11 @@ const handler =  async(req, res)=> {
                 res.status(500).json({ error: error.message });
             }
         }
-                
+
     } catch (error) {
-        res.status(500).json({error:error.message})
+        res.status(500).json({ error: error.message })
     }
-   
-  }
-  
-  export default connectToMongo(handler);
+
+}
+
+export default connectToMongo(handler);
