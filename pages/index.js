@@ -44,7 +44,7 @@ const Home = ({posts}) => {
           </Link>
         </div>
       </div>
-      {/* https://blogs-com-timu.vercel.app */}
+      {/*https://blogs-com-timu.vercel.app/ */}
       {/* items.category === 'watch'? 'watchblog': 'mobileblog'}/${ */}
       <div className={Styles.blogcontainer}>
         <div className={Styles.blogs}>

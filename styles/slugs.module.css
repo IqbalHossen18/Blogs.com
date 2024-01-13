@@ -95,7 +95,6 @@
 }
 
 .hoverableCell {
-    /* border:1px solid rgb(122, 122, 2); */
     position: relative;
     padding:5px;
     background-color: silver;
